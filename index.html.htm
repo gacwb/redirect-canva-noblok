@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Redirecionando...</title>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js' );
+    fbq('init', '3670594089901250');
+    fbq('track', 'InitiateCheckout');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=3670594089901250&ev=InitiateCheckout&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel Code -->
+
+  <!-- UTMFY Script -->
+  <script
+    src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+    data-utmify-prevent-xcod-sck
+    data-utmify-prevent-subids
+    async
+    defer
+  ></script>
+
+  <style>
+    body { display: none; }
+  </style>
+</head>
+<body>
+  <script>
+    setTimeout(function( ) {
+      const url = new URL(window.location.href);
+      const params = url.search;
+      const checkoutURL = "https://pay.cakto.com.br/iw7sm4c_456958"; // URL do checkout da Cackto
+      window.location.href = checkoutURL + params;
+    }, 200 ); // Atraso de 200ms para permitir o carregamento dos pixels
+  </script>
+</body>
+</html>
